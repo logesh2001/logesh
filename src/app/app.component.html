@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="table">
+    <thead>
+        <th>
+            ID
+        </th>
+        <th>
+            title
+        </th>
+
+
+    </thead>
+    <tbody>
+        <tr *ngFor ="let post of POSTS  | paginate:{itemsPerPage: tableSize ,currentPage:page,totalItems:count};
+        let i =index">
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+        </tr>
+    </tbody>
+</table>
+<div>
+    <pagination-controls 
+    previousLabel="prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)">
+</pagination-controls>
+</div>
+</div>
+
+
+
+
+
+
+
