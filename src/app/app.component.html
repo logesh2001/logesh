@@ -11,10 +11,12 @@
 
     </thead>
     <tbody>
-        <tr *ngFor ="let post of POSTS  | paginate:{itemsPerPage: tableSize ,currentPage:page,totalItems:count};
+        <tr *ngFor ="let p of POSTS  | paginate:{itemsPerPage: tableSize ,currentPage:page,totalItems:count};
         let i =index">
-            <td>{{post.id}}</td>
-            <td>{{post.title}}</td>
+
+
+            <td>{{p.id}}</td>
+            <td>{{p.title}}</td>
         </tr>
     </tbody>
 </table>
